@@ -13,12 +13,14 @@ const Post = props => {
   const addLikes = () => {
     setLikes(likes => likes + 1)
   }
+  console.log(props.post.timestamp)
   return (
     <div className="post-border">
       <PostHeader
         username={props.post.username}
         thumbnailUrl={
           props.post.thumbnailUrl
+          
         }
       />
       <div className="post-image-wrapper">
@@ -26,15 +28,21 @@ const Post = props => {
           alt="post thumbnail"
           className="post-image"
           src={props.post.imageUrl}
+          
         />
       </div>
       <LikeSection addLikes={addLikes} likes = {likes} />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
+        
       />
+     <div className= "timestamp">
+      <p>{props.post.timestamp}</p>
+     </div>
     </div>
   );
+  
 };
 
 export default Post;
