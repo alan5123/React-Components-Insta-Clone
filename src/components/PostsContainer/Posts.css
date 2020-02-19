@@ -54,3 +54,9 @@
   margin: 15px 0px;
   font-size: 16px;
 }
+
+.timestamp{
+  color:rgba(116, 116, 116, 0.664);
+  text-align: left;
+  margin: 0 1rem;
+}
